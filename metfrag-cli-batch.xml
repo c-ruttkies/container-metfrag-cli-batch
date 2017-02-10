@@ -8,7 +8,6 @@
   <description>Run MetFrag with given MetFrag parameters</description>
   <command><![CDATA[
 	java -jar /usr/local/bin/MetFragCLI.jar "$(cat $inputfolder) ResultsPath=$outputfile";
-	# if [ $? -eq 0 ]; then cat /tmp/output.txt > $outputfile; else exit 1; fi;
   ]]>
   </command>
   <inputs>

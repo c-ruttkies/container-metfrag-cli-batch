@@ -5,11 +5,13 @@
     <description>Run MetFrag with given MetFrag parameters</description>
     <requirements>
         <container type="docker">phnmnl/metfrag-cli-batch</container>
+	<!-- requirement type="binary">java</requirement -->
     </requirements>
     <command>
 	"`cat $inputfolder` ResultsFile=$outputfile";
   
   </command>
+	<!-- command>java -jar /usr/local/bin/MetFragCLI.jar `cat $inputfolder` ResultsFile=$outputfile"</command-->
     <inputs>
      <param format="txt" label="Input folder MetFrag parameter files" name="inputfolder" optional="False" type="data" />
     </inputs>

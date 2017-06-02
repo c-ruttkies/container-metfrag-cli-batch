@@ -2,20 +2,19 @@
 <!--This is a configuration file for the integration of a tools into Galaxy (https://galaxyproject.org/).-->
 <!--Proposed Tool Section: [PhenoMeNal]-->
 <tool id="metfrag-cli-batch" name="metfrag-cli-batch" version="0.1">
-  <requirements>
+    <description>Run MetFrag with given MetFrag parameters</description>
+    <requirements>
         <container type="docker">phnmnl/metfrag-cli-batch</container>
-  </requirements>
-  <description>Run MetFrag with given MetFrag parameters</description>
-  <command><![CDATA[
+    </requirements>
+    <command>
 	"`cat $inputfolder` ResultsFile=$outputfile";
-  ]]>
+  
   </command>
-  <inputs>
-    <param name="inputfolder" type="data" format="txt" optional="False" label="Input folder MetFrag parameter files" />
-  </inputs>
-  <outputs>
-    <data name="outputfile" type="text" format="csv" label="Output file containing MetFrag results" />
-  </outputs>
-  <help>Run MetFrag with given MetFrag parameters.</help>
+    <inputs>
+        <param format="txt" label="Input folder MetFrag parameter files" name="inputfolder" optional="False" type="data" />
+    </inputs>
+    <outputs>
+        <data format="csv" label="Output file containing MetFrag results" name="outputfile" type="text" />
+    </outputs>
+    <help>Run MetFrag with given MetFrag parameters.</help>
 </tool>
-
